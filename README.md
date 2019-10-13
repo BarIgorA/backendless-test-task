@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[Demo](https://barigora.github.io/backendless-test-task/).
+
 ## Тестовое задание для позиции JavaScript разработчик
 
 Используя React, React Router и Webpack написать небольшое клиентское приложение, работающее по типу простейшей CMS (content management system).
