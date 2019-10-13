@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7cf6d1289a10c911a1d8c6ae99858659",
+    "revision": "017f6de746c92564b3ee18ba5151f9b8",
     "url": "/backendless-test-task/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/backendless-test-task/static/css/9.8163a9d7.chunk.css"
   },
   {
-    "revision": "2d993954b87d4ddb474b",
+    "revision": "ea1e0f33fcb7f96266e3",
     "url": "/backendless-test-task/static/css/main.6bed1385.chunk.css"
   },
   {
@@ -72,8 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/backendless-test-task/static/js/9.6f5dc751.chunk.js"
   },
   {
-    "revision": "2d993954b87d4ddb474b",
-    "url": "/backendless-test-task/static/js/main.f9ebdbab.chunk.js"
+    "revision": "ea1e0f33fcb7f96266e3",
+    "url": "/backendless-test-task/static/js/main.a3684973.chunk.js"
   },
   {
     "revision": "1aacb815cd76808a806f",
