@@ -1,0 +1,2 @@
+(this.webpackJsonpbackendless=this.webpackJsonpbackendless||[]).push([[1,10],{13:function(n,e,t){"use strict";t.r(e);var s=t(0),o=t.n(s),a=t(79),i=t.n(a);e.default=function(){return o.a.createElement("div",{className:i.a.SomethingWrong},"Something went wrong!")}},79:function(n,e,t){n.exports={SomethingWrong:"styles_SomethingWrong__1LJx7"}}}]);
+//# sourceMappingURL=1.b441a6a4.chunk.js.map

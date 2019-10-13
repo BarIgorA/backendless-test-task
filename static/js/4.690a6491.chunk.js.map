@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/tabs/dummyList.js"],"names":["DummyList"],"mappings":"2GAAA,2BAMeA,UAJG,kBAChB,4BAAI,qCAAc","file":"static/js/4.690a6491.chunk.js","sourcesContent":["import React from 'react';\n\nconst DummyList = () => (\n  <ul><li>Dummy</li><li>List</li></ul>\n);\n\nexport default DummyList;\n"],"sourceRoot":""}

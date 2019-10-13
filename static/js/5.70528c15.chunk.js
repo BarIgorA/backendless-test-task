@@ -1,0 +1,2 @@
+(this.webpackJsonpbackendless=this.webpackJsonpbackendless||[]).push([[5],{45:function(e,t,l){"use strict";l.r(t);var n=l(0),a=l.n(n);t.default=function(){return a.a.createElement("table",null,a.a.createElement("tbody",null,a.a.createElement("tr",null,a.a.createElement("td",null,"Dummy"),a.a.createElement("td",null,"Table"))))}}}]);
+//# sourceMappingURL=5.70528c15.chunk.js.map

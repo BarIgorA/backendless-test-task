@@ -1,0 +1,2 @@
+(this.webpackJsonpbackendless=this.webpackJsonpbackendless||[]).push([[2,11],{43:function(t,a,e){"use strict";e.r(a);var m=e(0),r=e.n(m),s=e(81),c=e.n(s);a.default=function(){return r.a.createElement("div",{className:c.a.DummyChart},r.a.createElement("div",{className:c.a.title},"Dummy Chart"),r.a.createElement("div",{className:c.a.chart},"100%"))}},81:function(t,a,e){t.exports={DummyChart:"dummyChart_DummyChart__2A_4j",title:"dummyChart_title__2OeI5",chart:"dummyChart_chart__1sXN1"}}}]);
+//# sourceMappingURL=2.22bd59a7.chunk.js.map
