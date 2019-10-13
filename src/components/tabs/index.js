@@ -25,7 +25,7 @@ const Tabs = ({ tabs, location: { pathname } }) => {
             <li key={id}>
               <NavLink
                 isActive={isActive(id, pathname, key)}
-                to={`/${id}`}
+                to={`${REACT_APP_HOMEPAGE}${id}`}
               >
                 {title}
               </NavLink>
