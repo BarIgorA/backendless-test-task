@@ -5,7 +5,7 @@ import styles from './dummyChart.module.scss';
 
 const DummyChart = () => (
   <div className={styles.DummyChart}>
-    <div>Dummy Chart</div>
+    <div className={styles.title} >Dummy Chart</div>
     <div className={styles.chart} >100%</div>
   </div>
 );

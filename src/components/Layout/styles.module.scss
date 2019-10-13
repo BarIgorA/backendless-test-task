@@ -1,12 +1,11 @@
 @import '../../themes/theme-default.scss';
 
 .Layout {
-  background-color: bisque;
+  background-color: $color-grey-light;
 }
 
 @include desktop {
   .Layout {
     max-width: $desktopMaxWidth;
-    background-color: $color-grey-light;
   }
 }

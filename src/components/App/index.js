@@ -16,12 +16,26 @@ import request from '../../utils/request';
 
 
 const App = ({ routes }) => {
+  const [firstRender, setFirstRender] = useState(true);
   const [tabs, setTabs] = useState([]);
 
   useEffect( () => {
     const fetchData = async () => {
-      const {result} = await request('tabs.json');
-      if (result) setTabs(result);
+      const { result, error } = await request('tabs.json');
+      if (error) return;
+      if (result && typeof result !== 'string') {
+        setTabs(
+          result
+            .sort(
+              (a, b) => (
+                Number.isSafeInteger(a.order) && Number.isSafeInteger(b.order)
+                  ? a.order - b.order
+                  : 0
+              ),
+            ),
+        );
+      }
+      setFirstRender(false);
     };
     fetchData();
   }, []);
@@ -29,12 +43,12 @@ const App = ({ routes }) => {
   return (
     <Layout>
       <Header />
-      <Router>
-        <Tabs tabs={tabs} />
         <Main>
-          {routes(tabs)}
+          <Router>
+            <Tabs tabs={tabs} />
+            {firstRender || routes(tabs)}
+          </Router>
         </Main>
-      </Router>
       <Footer />
     </Layout>
   );

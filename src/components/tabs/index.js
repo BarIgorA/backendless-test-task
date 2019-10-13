@@ -2,33 +2,39 @@
  * Header module
  */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { number, arrayOf, shape, string } from 'prop-types';
 
 // Styles
 import styles from './styles.module.scss';
 
 
-const Tabs = ({ tabs }) => (
-  <ul className={styles.Tabs} >
-    {
-      !!tabs.length &&
-      tabs
-        .sort(
-          (a, b) => (
-            Number.isSafeInteger(a.order) && Number.isSafeInteger(b.order)
-              ? a.order - b.order
-              : 0
-          ),
-        )
-        .map(({id, title}) => (
-        <li key={id}>
-          <Link to={`/${id}`}>{title}</Link>
-        </li>
-      ))
-    }
-  </ul>
+const isActive = (id, pathname, key) => () => (
+  pathname === `/${id}` || (pathname === '/' && !key)
 );
+
+const Tabs = ({ tabs, location: { pathname } }) => {
+
+    return (
+    <nav>
+      <ul className={styles.Tabs} >
+        {
+          !!tabs.length &&
+          tabs.map(({id, title}, key) => (
+            <li key={id}>
+              <NavLink
+                isActive={isActive(id, pathname, key)}
+                to={`/${id}`}
+              >
+                {title}
+              </NavLink>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  );
+};
 
 Tabs.propTypes = {
   tabs: arrayOf(
@@ -39,6 +45,7 @@ Tabs.propTypes = {
       path: string,
     }),
   ),
+  pathname: string,
 };
 
 Tabs.defaultProps = {
@@ -46,4 +53,4 @@ Tabs.defaultProps = {
 };
 
 
-export default Tabs;
+export default withRouter(Tabs);

@@ -8,7 +8,12 @@ import styles from './styles.module.scss';
 
 
 const Footer = () => (
-  <footer className={styles.Footer} >Footer</footer>
+  <footer className={styles.Footer} >
+    <span>React</span>
+    <span>Lasy loading</span>
+    <span>Routing</span>
+    <span>Hooks</span>
+  </footer>
 );
 
 
