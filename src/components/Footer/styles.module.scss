@@ -1,0 +1,16 @@
+@import '../../themes/vars';
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: $footerHeight;
+  background-color: $color-blue-medium;
+  color: $color-grey-light;
+
+  span {
+    font-size: rem(14);
+    line-height: 1.6;
+  }
+}

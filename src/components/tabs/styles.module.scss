@@ -1,0 +1,72 @@
+@import '../../themes/vars';
+
+.Tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: $tabsHeight;
+  margin-bottom: rem(12);
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  li {
+    background-color: $color-blue-dark;
+    flex-grow: 1;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0 rem(16);
+      font-size: $mobileFontSize;
+      color: $color-grey-medium;
+      text-transform: uppercase;
+      transition: border-bottom-color .3s,color .3s;
+      border-bottom: 2px solid transparent;
+      outline: none;
+      white-space: nowrap;
+      opacity: .7;
+      z-index: 10;
+      box-sizing: border-box;
+
+      &[class*="active"] {
+        border-bottom-color: $color-green-medium;
+        color: $color-white;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .Tabs {
+    width: auto;
+
+    li {
+      background-color: transparent;
+
+      a {
+        color: $color-grey-dark;
+        font-size: $desktopFontSize;
+        border-bottom: none;
+
+        &:hover {
+          color: darken($color-blue-dark, 30%);
+        }
+
+        &[class*="active"] {
+          border-bottom: none;
+          background-color: $color-green-dark;
+          color: $color-white;
+
+          &:hover {
+            color: darken($color-white, 20%);
+          }
+        }
+      }
+    }
+  }
+}
