@@ -8,9 +8,10 @@ import { number, arrayOf, shape, string } from 'prop-types';
 // Styles
 import styles from './styles.module.scss';
 
-
+const { REACT_APP_HOMEPAGE = '/' } = process.env;
 const isActive = (id, pathname, key) => () => (
-  pathname === `/${id}` || (pathname === '/' && !key)
+  pathname === `${REACT_APP_HOMEPAGE}${id}`
+  || (pathname === `${REACT_APP_HOMEPAGE}` && !key)
 );
 
 const Tabs = ({ tabs, location: { pathname } }) => {

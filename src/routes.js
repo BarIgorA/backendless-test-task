@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 
 
 const SomethingWentWrong = lazy(() => import('./components/common/SomethingWrong/index'));
+const { REACT_APP_HOMEPAGE = '/' } = process.env;
 
 export default (tabs) => tabs.length ? (
   <Suspense fallback={<div>Loading...</div>} >
@@ -17,7 +18,11 @@ export default (tabs) => tabs.length ? (
             <Route
               key={id}
               exact
-              path={key ? `/${id}`: [`/${id}`, '/']}
+              path={
+                key
+                  ? `${REACT_APP_HOMEPAGE}${id}`
+                  : [`${REACT_APP_HOMEPAGE}${id}`, `${REACT_APP_HOMEPAGE}`]
+              }
               component={lazy(() => import(`./components/${path}`))}
             />
           ))
